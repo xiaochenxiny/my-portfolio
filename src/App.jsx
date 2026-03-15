@@ -20,8 +20,8 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 
 const profile = {
-  name: "李梓琳 / Elina",
-  role: "中山大学· 信息工程· 本科生",
+  name: "李梓琳 - Elina",
+  role: "中山大学系统科学与工程学院 信息工程专业",
   intro:
     "关注 AI 应用、工程实现与科研项目落地，重视从问题定义、系统搭建、实验验证到成果输出的完整链路，强调可复现、可验证、可交付。",
   emailWork: "18675122066@163.com",
