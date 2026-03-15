@@ -27,7 +27,7 @@ const profile = {
   emailWork: "18675122066@163.com",
   emailSchool: "lizlin28@mail2.sysu.edu.cn",
   github: "https://github.com/xiaochenxiny",
-  resume: "#",
+  resume: "/Elina resume.pdf",
 };
 
 const navItems = [
