@@ -33,6 +33,7 @@ const profile = {
 const navItems = [
   { label: "首页", href: "#home" },
   { label: "关于我", href: "#about" },
+  { label: "产品实践经历", href: "#owns" },
   { label: "项目经历", href: "#projects" },
   { label: "技能栈", href: "#skills" },
   { label: "成果奖项", href: "#awards" },
@@ -40,9 +41,40 @@ const navItems = [
 ];
 
 const stats = [
-  { label: "项目实践", value: "信息物理 / 电力自动脚本 / 神经编码" },
+  { label: "项目实践", value: "嵌入式Agent-信息物理-电力自动脚本" },
   { label: "成果能力", value: "论文，发明专利，CET-6" },
   { label: "工具使用", value: "Cursor，Coze，Visio" },
+];
+
+const owns = [
+  {
+    title: "实习经历-嵌入式AI Agent",
+    period: "2025.- 202",
+    role: "AI实习生",
+    description:
+      "嵌入式全流程开发Agent，自动对接需求，生成可编译可落地的嵌入式代码，自动完成编译-烧录-调试，",
+    stack: ["Python", "嵌入式"],
+    contribution:
+      "参与Agent架构设计。负责Planner模块和Tool模块的设计与调优",
+    highlights: [
+      "目前产品在内测阶段",
+    ],
+  },
+  {
+    title: "个人项目-AI语音实时转写助手",
+    period: "202 - 至今",
+    role: "独立开发 Vibe Coding",
+    description:
+      "由于软件的权限设置或其它工具的操作繁杂性，导致线上会议或者观看的视频无法被及时记录。开发此项工具方便日常生活的线上/线下会议、课堂、访谈的信息记录与总结",
+    stack: ["Python", "Javasript", "Vercel", "Github"],
+    contribution:
+      "前后端分离。前端采用React+Vite搭建交互界面，后端利用Python+FastAPI搭建接口服务，调用faster-whisper完成语音识别。",
+    highlights: [
+      "前端已发布，后端暂未上线",
+      "暂时只支持本地部署",
+    ],
+  },
+
 ];
 
 const projects = [
@@ -109,10 +141,10 @@ const skillGroups = [
     icon: Sparkles,
     items: [
       "Prompt Engineering",
-      "模型实验分析",
+      "Vibe Coding",
       "数据处理",
       "可视化表达",
-      "科研写作",
+      "文档撰写",
     ],
   },
 ];
@@ -123,12 +155,12 @@ const awards = [
     detail: "第十五届 MathorCup 数学应用挑战赛全国一等奖｜队长（2025.06）",
   },
   {
-    title: "省级竞赛奖项",
+    title: "省级荣誉",
     detail:
       "全国大学生数学建模竞赛广东赛区二等奖｜核心成员（2025.11）；第十四届全国海洋航行器设计与制作大赛华南赛区三等奖｜核心成员（2025.08）",
   },
   {
-    title: "校级奖助与志愿经历",
+    title: "校级荣誉",
     detail:
       "中山大学 2024 年一星级志愿者（2025.03）；中山大学校级优秀学生一等奖学金、三等奖学金（2023-2025）；中山大学何文伉俪奖助学金（2023-2025）；中山大学 2024 年寒招优秀志愿者（2024.11）",
   },
