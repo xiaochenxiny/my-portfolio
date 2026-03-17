@@ -71,9 +71,22 @@ const owns = [
       "前后端分离。前端采用React+Vite搭建交互界面，后端利用Python+FastAPI搭建接口服务，调用faster-whisper完成语音识别。",
     highlights: [
       "前端已发布，后端暂时只支持本地部署",
-      "https://transcribe-seven-mauve.vercel.app/",
+      "前端链接: https://transcribe-seven-mauve.vercel.app/",
     ],
   },
+{
+  title: "个人项目-Coze数模竞赛备赛助手",
+  period: "2025 - 至今",
+  role: "独立设计与搭建",
+  description:
+    "基于 Coze 搭建面向大学生数学建模竞赛的 AI 备赛助手，帮助用户完成题型识别、方法推荐、备赛规划、论文写作指导与比赛策略分析。",
+  stack: ["Coze", "Prompt Engineering", "Knowledge Base", "Workflow Design"],
+  contribution:
+    "完成助手人设设计、Prompt 优化与知识库模块化整理，围绕数模竞赛高频场景构建结构化问答能力；结合备赛流程、常见模型方法、论文写作规范与代码模板，提升助手输出的针对性、可执行性与场景适配度。",
+  highlights: [
+    "支持题型识别、方法讲解等内容",
+  ],
+},
 
 ];
 
