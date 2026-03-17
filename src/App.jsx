@@ -49,29 +49,28 @@ const stats = [
 const owns = [
   {
     title: "实习经历-嵌入式AI Agent",
-    period: "2025.- 202",
+    period: "2025.6- 2025.8",
     role: "AI实习生",
     description:
-      "嵌入式全流程开发Agent，自动对接需求，生成可编译可落地的嵌入式代码，自动完成编译-烧录-调试，",
-    stack: ["Python", "嵌入式"],
+      "参与面向嵌入式开发场景的 AI Agent 产品开发与实践，目标是打通从需求理解、任务拆解到代码生成、编译烧录与调试反馈的开发闭环，提升嵌入式开发流程的自动化程度与交付效率。",
+    stack: ["Python", "嵌入式", "Tool Calling", "Prompt Engineering"],
     contribution:
-      "参与Agent架构设计。负责Planner模块和Tool模块的设计与调优",
+      "参与 Agent 整体架构设计与结果调优，重点负责 Planner 模块与 Tool 模块的设计、联调与优化",
     highlights: [
       "目前产品在内测阶段",
     ],
   },
   {
     title: "个人项目-AI语音实时转写助手",
-    period: "202 - 至今",
-    role: "独立开发 Vibe Coding",
+    period: "2025 - 至今",
+    role: "独立开发(Vibe Coding)",
     description:
-      "由于软件的权限设置或其它工具的操作繁杂性，导致线上会议或者观看的视频无法被及时记录。开发此项工具方便日常生活的线上/线下会议、课堂、访谈的信息记录与总结",
+      "针对线上会议、课程学习、访谈记录及视频内容难以及时沉淀的问题，设计并开发 AI 语音转写助手，支持音频采集、语音识别、内容整理与总结输出，提升信息记录与会后整理效率。",
     stack: ["Python", "Javasript", "Vercel", "Github"],
     contribution:
       "前后端分离。前端采用React+Vite搭建交互界面，后端利用Python+FastAPI搭建接口服务，调用faster-whisper完成语音识别。",
     highlights: [
-      "前端已发布，后端暂未上线",
-      "暂时只支持本地部署",
+      "前端已发布，后端暂时只支持本地部署",
     ],
   },
 
@@ -257,7 +256,7 @@ function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const sectionIds = useMemo(
-    () => ["home", "about", "projects", "skills", "awards", "contact"],
+    () => ["home", "about", "owns", "projects", "skills", "awards", "contact"],
     []
   );
   const activeSection = useActiveSection(sectionIds);
@@ -861,6 +860,117 @@ const containerStyle = {
           </div>
         </section>
 
+        <section id="owns" style={sectionStyle}>
+          <div style={containerStyle}>
+            <SectionTitle
+              eyebrow="Product Practice"
+              title="产品实践经历"
+              darkMode={darkMode}
+            />
+
+            <div className="owns-grid" style={grid2Style()}>
+              {owns.map((own, index) => (
+                <motion.div
+                  key={own.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.18 }}
+                  transition={{ duration: 0.45, delay: index * 0.08 }}
+                >
+                  <div style={projectCardStyle(theme)}>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "flex-start",
+                        gap: 14,
+                        marginBottom: 18,
+                      }}
+                    >
+                      <div>
+                        <h3
+                          style={{
+                            margin: 0,
+                            fontSize: 22,
+                            lineHeight: 1.35,
+                            fontWeight: 700,
+                          }}
+                        >
+                          {own.title}
+                        </h3>
+                        <div
+                          style={{
+                            marginTop: 10,
+                            display: "flex",
+                            gap: 10,
+                            flexWrap: "wrap",
+                            fontSize: 13,
+                            color: theme.subText,
+                          }}
+                        >
+                          <span>{own.role}</span>
+                          <span>·</span>
+                          <span>{own.period}</span>
+                        </div>
+                      </div>
+
+                      <div
+                        style={{
+                          borderRadius: 14,
+                          padding: 10,
+                          border: `1px solid ${theme.cardBorder}`,
+                          background: darkMode
+                            ? "rgba(255,255,255,0.03)"
+                            : "rgba(255,255,255,0.7)",
+                        }}
+                      >
+                        <Briefcase size={18} />
+                      </div>
+                    </div>
+
+                    <p style={smallParagraphStyle(theme)}>{own.description}</p>
+
+                    <div style={{ marginTop: 18 }}>
+                      <div style={eyebrowText(theme)}>技术栈</div>
+                      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10 }}>
+                        {own.stack.map((item) => (
+                          <span key={item} style={badgeStyle(theme)}>
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div style={{ marginTop: 18 }}>
+                      <p style={{ ...smallParagraphStyle(theme), margin: 0 }}>
+                        <span style={{ color: theme.text, fontWeight: 700 }}>个人贡献：</span>
+                        {own.contribution}
+                      </p>
+                    </div>
+
+                    <div style={{ marginTop: 18 }}>
+                      <div style={eyebrowText(theme)}>成果亮点</div>
+                      <ul
+                        style={{
+                          margin: "10px 0 0",
+                          paddingLeft: 18,
+                          color: theme.subText,
+                          lineHeight: 1.9,
+                          fontSize: 14,
+                        }}
+                      >
+                        {own.highlights.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="projects" style={sectionStyle}>
           <div style={containerStyle}>
             <SectionTitle
@@ -1120,7 +1230,7 @@ const containerStyle = {
                     <div style={contactTitleRow()}>
                       <Download size={16} /> 简历下载
                     </div>
-                    <div style={contactTextStyle(theme)}>补充 PDF 后可直接下载</div>
+                    <div style={contactTextStyle(theme)}>点击后可直接下载</div>
                   </a>
                 </div>
               </div>
@@ -1311,7 +1421,8 @@ const containerStyle = {
 
   .project-grid,
   .skill-grid,
-  .award-grid {
+  .award-grid,
+  .owns-grid {
     grid-template-columns: 1fr !important;
   }
 }
@@ -1345,6 +1456,14 @@ function grid3Style() {
   return {
     display: "grid",
     gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+    gap: 22,
+  };
+}
+
+function grid2Style() {
+  return {
+    display: "grid",
+    gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
     gap: 22,
   };
 }
