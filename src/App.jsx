@@ -71,6 +71,7 @@ const owns = [
       "前后端分离。前端采用React+Vite搭建交互界面，后端利用Python+FastAPI搭建接口服务，调用faster-whisper完成语音识别。",
     highlights: [
       "前端已发布，后端暂时只支持本地部署",
+      "https://transcribe-seven-mauve.vercel.app/",
     ],
   },
 
