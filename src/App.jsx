@@ -882,7 +882,7 @@ const containerStyle = {
               darkMode={darkMode}
             />
 
-            <div className="owns-grid" style={grid2Style()}>
+            <div className="owns-grid" style={grid3Style()}>
               {owns.map((own, index) => (
                 <motion.div
                   key={own.title}
